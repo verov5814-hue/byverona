@@ -1,1 +1,68 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Verona — stories for people with weird taste</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --black: #0F0D0B; --dark: #161210; --card: #1E1A16;
+    --accent: #C9A96E; --accent-dim: #7A5F3A; --border: #2E2620;
+    --text: #E8E0D0; --muted: #8A7D6E; --white: #F5F0E8;
+  }
+  body { background: var(--black); color: var(--text); font-family: 'Inter', sans-serif; font-weight: 300; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 3rem 1.5rem; }
+  .container { max-width: 560px; width: 100%; text-align: center; }
+  .author-name { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 10vw, 5.5rem); font-weight: 900; color: var(--white); letter-spacing: -0.02em; line-height: 1; }
+  .tagline { font-size: 0.78rem; letter-spacing: 0.2em; color: var(--muted); font-style: italic; margin-top: 0.8rem; margin-bottom: 3rem; }
+  .divider { width: 40px; height: 1px; background: var(--accent); margin: 0 auto 3rem; }
+  .books-label { font-size: 0.6rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; }
+  .book-card { display: flex; gap: 1.5rem; align-items: flex-start; background: var(--card); border: 1px solid var(--border); padding: 1.2rem; text-decoration: none; color: inherit; text-align: left; transition: border-color 0.3s, transform 0.3s; margin-bottom: 1rem; position: relative; }
+  .book-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--accent); transform: scaleX(0); transition: transform 0.3s ease; transform-origin: left; }
+  .book-card:hover { border-color: var(--accent-dim); transform: translateY(-2px); }
+  .book-card:hover::before { transform: scaleX(1); }
+  .book-cover { width: 80px; flex-shrink: 0; box-shadow: 0 8px 24px rgba(0,0,0,0.5); }
+  .book-cover img { width: 100%; display: block; }
+  .book-info { flex: 1; padding-top: 0.2rem; }
+  .book-genre { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.4rem; }
+  .book-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--white); line-height: 1.2; margin-bottom: 0.5rem; }
+  .book-blurb { font-size: 0.78rem; color: var(--muted); line-height: 1.6; font-style: italic; }
+  .book-arrow { position: absolute; bottom: 1rem; right: 1.2rem; font-size: 0.7rem; color: var(--accent-dim); }
+  .book-card-placeholder { border: 1px dashed var(--border); padding: 1.5rem; text-align: center; margin-bottom: 1rem; }
+  .placeholder-text { font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.88rem; color: var(--muted); }
+  .links { display: flex; gap: 0.8rem; justify-content: center; margin-top: 2.5rem; flex-wrap: wrap; }
+  .link-btn { display: inline-flex; align-items: center; gap: 0.5rem; border: 1px solid var(--border); color: var(--muted); padding: 0.65rem 1.2rem; font-family: 'Inter', sans-serif; font-size: 0.75rem; letter-spacing: 0.1em; text-decoration: none; text-transform: uppercase; transition: border-color 0.3s, color 0.3s; }
+  .link-btn:hover { border-color: var(--accent); color: var(--white); }
+  footer { margin-top: 3rem; font-size: 0.68rem; color: var(--muted); letter-spacing: 0.08em; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1 class="author-name">Verona</h1>
+  <p class="tagline">stories for people with weird taste</p>
+  <div class="divider"></div>
+  <p class="books-label">Books</p>
+  <a class="book-card" href="/loveoutoflist">
+    <div class="book-cover">
+      <img src="https://raw.githubusercontent.com/verov5814-hue/byverona/main/cover.png" alt="Love Out of List cover"/>
+    </div>
+    <div class="book-info">
+      <p class="book-genre">Psychological Thriller</p>
+      <p class="book-title">Love Out of List</p>
+      <p class="book-blurb">In a world where everyone is hiding something, obsession doesn't belong to just one person.</p>
+    </div>
+    <span class="book-arrow">↗</span>
+  </a>
+  <div class="book-card-placeholder">
+    <p class="placeholder-text">next book — coming when it's ready</p>
+  </div>
+  <div class="links">
+    <a class="link-btn" href="https://verona.stck.me" target="_blank" rel="noopener">📖 Read on Stck</a>
+    <a class="link-btn" href="https://buymeacoffee.com/verov5814i" target="_blank" rel="noopener">☕ Buy me a coffee</a>
+  </div>
+</div>
+<footer>© 2026 Verona · All rights reserved.</footer>
+</body>
+</html>
